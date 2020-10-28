@@ -6,17 +6,18 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Video JS Demo</title>
-    <link href="//vjs.zencdn.net/7.8.2/video-js.min.css" rel="stylesheet">
-    <script src="//vjs.zencdn.net/7.8.2/video.min.js"></script>
-    <script src="index.js"></script>
+    <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+    <link href="videojs-logobrand/src/videojs.logobrand.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
 </head>
 <body>
     <h1>
         Welcome to the video.js Demo
     </h1>
-    <video id="my-player" class="video-js" data-setup='{}' controls preload="auto">
-        <source src="video.mp4" type="video/mp4">
-    </video>
+        <video class="video-js" controls data-setup='{}'>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+    </div>
 
     <style>
         body{
@@ -27,12 +28,21 @@
             height: 100vh;
             background-color: cornflowerblue;
         }
-        video{
-            margin:10pt
-        }
         h1{
             margin: 100pt 0 0 0
         }
+
+        img{
+            width:10px;
+        }
+
+        div{
+            height: 500px;
+        }
+
     </style>
+    <script src="videojs-logobrand/src/videojs.logobrand.v5.js"></script>
+    <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
