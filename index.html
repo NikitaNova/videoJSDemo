@@ -5,44 +5,45 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Video JS Demo</title>
-    <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
-    <link href="videojs-logobrand/src/videojs.logobrand.css" rel="stylesheet">
-    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <title>VideoJS Demo</title>
+
+    <link href="//vjs.zencdn.net/7.8.2/video-js.min.css" rel="stylesheet">
+    <link ref="stylesheet" href="videojs-brand-master/">
+
 </head>
 <body>
-    <h1>
-        Welcome to the video.js Demo
-    </h1>
-        <video class="video-js" controls data-setup='{}'>
-            <source src="video.mp4" type="video/mp4">
-        </video>
-    </div>
+    <h1>Welcome to the VideoJS Demo</h1>
+    <video id="my-video" class="video-js" controls data-setup="{}">
+        <source src="video.mp4" type="video/mp4">
+    </video>
 
+    <script src="//vjs.zencdn.net/7.8.2/video.min.js"></script>
+    <script src="videojs-brand-master/dist/videojs-brand.min.js"></script>
+    <script>
+        let video = document.getElementById('my-video')
+        let player = videojs(video)
+        player.brand({
+            image:"treasure-logo-lg.6d8788db.png",
+            title:"Treasure",
+            destination:"http://google.com",
+            destinationTarget:"_center"
+        })
+    </script>
     <style>
         body{
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: cornflowerblue;
+            background-color: rgba(199, 212, 248, 0.82);
         }
-        h1{
-            margin: 100pt 0 0 0
-        }
-
         img{
-            width:10px;
+            width:60px;
+            margin: 3px 0
         }
-
-        div{
-            height: 500px;
+        .video-js{
+            width:300px
         }
-
     </style>
-    <script src="videojs-logobrand/src/videojs.logobrand.v5.js"></script>
-    <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
-    <script src="index.js"></script>
 </body>
 </html>
